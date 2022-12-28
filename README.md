@@ -1,38 +1,35 @@
-# create-svelte
+# Vitest
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Vitest is a test runner. It is built on top of Vite, and provides a beautiful UI to view and interact with your tests.
 
-## Creating a project
+## Vitest Installation
 
-If you're seeing this, you've probably already done this step. Congrats!
+`pnpm install vitest` will install Vitest and its dependencies.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Vitest Configuration
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Vitest uses the same configuration as Vite. You can create a `vite.config.js` file in the root of your project to configure Vitest.
 
-## Developing
+# Features
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Vitest UI
+Powered by Vite, Vitest also has a dev server under the hood when running the tests. This allows Vitest to provide a beautiful UI to view and interact with your tests. The Vitest UI is optional, so you'll need to install it with:
 
-```bash
-npm run dev
+`pnpm vitest --ui` will start a dev server. The UI will automatically reload when you make changes to your tests.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+#Vitest Tests
 
-## Building
+`pnpm test:unit` will run your tests in the terminal.
 
-To create a production version of your app:
+## Vitest Coverage
+https://vitest.dev/guide/coverage.html#coverage-setup
 
-```bash
-npm run build
-```
+`pnpm test:unit:coverage` When you start the Vitest process, it will prompt you to install the corresponding support package automatically.
+It will run your tests and generate a coverage report.
 
-You can preview the production build with `npm run preview`.
+### For c8
+`pnpm i -D @vitest/coverage-c8`
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### For istanbul
+`pnpm i -D @vitest/coverage-istanbul`
+

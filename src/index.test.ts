@@ -1,8 +1,9 @@
 import { describe, it, expect, test, assert } from 'vitest';
+import sum from '$lib/sum';
 
 describe('sum test', () => {
-	it('adds 1 + 2 to equal 3', () => {
-		expect(1 + 2).toBe(3);
+	it('sum test', () => {
+		expect(sum(1, 2)).toBe(3);
 	});
 });
 
