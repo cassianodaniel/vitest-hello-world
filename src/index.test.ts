@@ -1,5 +1,13 @@
+/**
+ * @jest-environment jsdom
+ */
+
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import { describe, it, expect, test, assert } from 'vitest';
-import sum from '$lib/sum';
+import { render, screen } from "@testing-library/svelte";
+import sum from '$lib/helpers/sum';
+import Temperature from '$lib/components/Temperature.svelte';
 
 describe('sum test', () => {
 	it('sum test', () => {
@@ -65,4 +73,11 @@ describe('suite', () => {
 
 describe('test', () => {
 	assert.equal(3, 3);
+});
+
+describe('test Temperature render component', async () => {
+	const component = Temperature;
+	render(component);
+	const x = await screen.findByAltText('Farenheit');
+	expect(x).toBeTruthy();
 });

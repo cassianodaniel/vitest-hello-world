@@ -1,8 +1,10 @@
 <script>
+// @ts-nocheck
+
 	import { onMount } from 'svelte';
 	let result = 0;
 	onMount(async () => {
-		const sum = await import('$lib/sum.js').then((f) => f.default);
+		const sum = await import('$lib/helpers/sum.ts').then((f) => f.default);
 		result = sum(1, 2);
 	});
 </script>
