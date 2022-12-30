@@ -4,7 +4,6 @@
 
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
-import { describe, it, expect, test, assert } from 'vitest';
 import { render, screen } from "@testing-library/svelte";
 import sum from '$lib/helpers/sum';
 import Temperature from '$lib/components/Temperature.svelte';
@@ -45,7 +44,8 @@ describe('suite', () => {
 });
 
 // Only this suite (and others marked with only) are run
-describe.only('suite', () => {
+// describe.only(...
+describe('suite', () => {
 	it('test', () => {
 		assert.equal(Math.sqrt(3), 1.7320508075688772);
 	});

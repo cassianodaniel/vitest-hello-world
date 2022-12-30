@@ -5,6 +5,7 @@ import { defineConfig } from 'vitest/config';
 const config = {
 	plugins: [sveltekit()],
 	test: {
+		globals: true,
 		include: ['src/**/*.{test,spec}.{js,ts}'],
 		coverage: {
 			provider: 'c8'
