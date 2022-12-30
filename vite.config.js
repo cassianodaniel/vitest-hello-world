@@ -6,7 +6,7 @@ const config = {
 	plugins: [sveltekit()],
 	test: {
 		globals: true,
-		include: ['src/**/*.{test,spec}.{js,ts}'],
+		include: ['src/lib/helpers/**/*.{js,ts}', 'src/**/*.{test,spec}.{js,ts}'],
 		coverage: {
 			provider: 'c8'
 		}
